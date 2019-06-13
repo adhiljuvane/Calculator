@@ -8,7 +8,6 @@
 
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, TouchableOpacity, Dimensions } from 'react-native';
-import { DrawerNavigation } from 'react-navigation';
 
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 const SCREEN_WIDTH = Dimensions.get('window').width
@@ -129,9 +128,6 @@ export default class App extends Component {
           <View style={styles.operations}>
             {ops}
           </View>
-          <View styles={styles.overlay}>
-            {rows}
-          </View>
         </View>
       </View>
     );
@@ -173,14 +169,6 @@ const styles = StyleSheet.create({
     margin: 0,
     paddingBottom: 0,
     alignSelf: 'flex-end',
-  },
-  overlay: {
-    flex: 1,
-    position: 'absolute',
-    right: 0,
-    opacity: 0.5,
-    backgroundColor: 'blue',
-    width: SCREEN_WIDTH,
   },
   button: {
     flex: 1,
